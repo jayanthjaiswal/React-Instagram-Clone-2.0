@@ -11,13 +11,12 @@ exports[`Suggested-List Component should match snapshot with AdvancedFollow comp
   <div
     className="recomms_cont"
   >
-    <a
+    <Link
       className="recomms_username"
-      href="/profile/ghalib"
-      onClick={[Function]}
+      to="/profile/ghalib"
     >
       ghalib
-    </a>
+    </Link>
     <span>
       1 mutual follower
     </span>
@@ -26,7 +25,7 @@ exports[`Suggested-List Component should match snapshot with AdvancedFollow comp
     className="recomms_ff"
   >
     <a
-      className="pri_btn follow "
+      className="pri_btn follow"
       href="#"
       onClick={[Function]}
     >

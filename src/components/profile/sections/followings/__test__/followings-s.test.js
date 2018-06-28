@@ -1,13 +1,12 @@
 import React from 'react'
 import { create } from 'react-test-renderer'
 import { Provider } from 'react-redux'
-import mockStore from '../../../../../store/mockStore/mockStore'
-import { BrowserRouter as Router } from 'react-router-dom'
+import mockStore from '../../../../../store/__mocks__/mockStore'
 import Followings, { PureFollowings } from '../followings-s'
-import MockDataElement from '../../../../../utils/__test__/mock-dataElement'
+import MockDataElement from '../../../../../utils/__mocks__/mock-dataElement'
 import { shallow } from 'enzyme'
-import User from '../../../../../store/mockStore/mock-reducers/User'
-import Follow from '../../../../../store/mockStore/mock-reducers/Follow'
+import User from '../../../../../store/__mocks__/reducers/User'
+import Follow from '../../../../../store/__mocks__/reducers/Follow'
 
 describe('Followings Component', () => {
   MockDataElement()
@@ -15,9 +14,7 @@ describe('Followings Component', () => {
   it('should match snapshot', () => {
     const tree = create(
       <Provider store={mockStore}>
-        <Router>
-          <Followings param='takkar' />
-        </Router>
+        <Followings param='takkar' />
       </Provider>
     ).toJSON()
     expect(tree).toMatchSnapshot()

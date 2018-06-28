@@ -1,10 +1,9 @@
 import React from 'react'
 import { create } from 'react-test-renderer'
 import Banner from '../banner'
-import MockDataElement from '../../../../utils/__test__/mock-dataElement'
+import MockDataElement from '../../../../utils/__mocks__/mock-dataElement'
 import { Provider } from 'react-redux'
-import mockStore from '../../../../store/mockStore/mockStore'
-import { BrowserRouter as Router } from 'react-router-dom'
+import mockStore from '../../../../store/__mocks__/mockStore'
 
 describe('Banner Component', () => {
   MockDataElement()
@@ -12,9 +11,7 @@ describe('Banner Component', () => {
   it('should match snapshot', () => {
     const tree = create(
       <Provider store={mockStore}>
-        <Router>
-          <Banner/>
-        </Router>
+        <Banner/>
       </Provider>
     ).toJSON()
     expect(tree).toMatchSnapshot()

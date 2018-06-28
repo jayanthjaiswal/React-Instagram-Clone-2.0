@@ -10,14 +10,13 @@ exports[`UserGroupInfo Component should match snapshot 1`] = `
   <div
     className="m_top_right"
   >
-    <a
-      href="/group/11"
-      onClick={[Function]}
+    <Link
+      to="/group/11"
     >
       a groupss
-    </a>
+    </Link>
     <span>
-      Last year
+      a month ago
     </span>
   </div>
 </div>
@@ -33,19 +32,18 @@ exports[`UserGroupInfo Component should match snapshot when member is also the a
   <div
     className="m_top_right"
   >
-    <a
-      href="/group/11"
-      onClick={[Function]}
+    <Link
+      to="/group/11"
     >
       a groupss
-    </a>
+    </Link>
     <span
       className="grp_admin"
     >
       admin
     </span>
     <span>
-      Last year
+      a month ago
     </span>
   </div>
 </div>

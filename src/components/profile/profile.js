@@ -50,6 +50,7 @@ class Profile extends Component {
       ud: { id, firstname, surname, account_type },
       mutuals
     } = this.props
+    let notPrivate = !isPrivate(id, isFollowing, account_type)
 
     return (
       <div>
@@ -70,7 +71,7 @@ class Profile extends Component {
         <FadeIn duration='300ms' className={cLoading(loading)} >
           <Banner />
           {
-            !isPrivate(id, isFollowing, account_type) || isAdmin() ?
+            notPrivate || isAdmin() ?
               <div>
                 <ProfileNav url={url} user={id} />
                 <ProfileRoutes url={url} param={username} />
@@ -79,7 +80,11 @@ class Profile extends Component {
               <div style={{ marginTop: 85 }} >
                 <Nothing
                   mssg={`Account is private. Follow to connect with ${username}!!`}
-                  secondMssg={`${ mutuals.length != 0 ? humanReadable(mutuals.length, 'mutual follower') : '' }`}
+                  secondMssg={
+                    mutuals.length != 0
+                      ? humanReadable(mutuals.length, 'mutual follower')
+                      : ''
+                  }
                 />
               </div>
           }

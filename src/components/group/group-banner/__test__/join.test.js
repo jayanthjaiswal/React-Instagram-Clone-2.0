@@ -1,20 +1,17 @@
 import React from 'react'
-import MockDataElement from '../../../../utils/__test__/mock-dataElement'
+import MockDataElement from '../../../../utils/__mocks__/mock-dataElement'
 import { create } from 'react-test-renderer'
 import { Provider } from 'react-redux'
-import mockStore from '../../../../store/mockStore/mockStore'
-import { BrowserRouter as Router } from 'react-router-dom'
+import mockStore from '../../../../store/__mocks__/mockStore'
 import JoinGroup from '../join'
-import Group from '../../../../store/mockStore/mock-reducers/Group'
+import Group from '../../../../store/__mocks__/reducers/Group'
 
 describe('JoinGroup Component', () => {
   MockDataElement()
 
   const comp = (
     <Provider store={mockStore}>
-      <Router>
-        <JoinGroup/>
-      </Router>
+      <JoinGroup/>
     </Provider>
   )
 

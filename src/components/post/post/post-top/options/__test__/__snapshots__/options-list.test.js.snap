@@ -4,12 +4,11 @@ exports[`PostOptionsList Component should match snapshot 1`] = `
 <div>
   <ul>
     <li>
-      <a
-        href="/post/11"
-        onClick={[Function]}
+      <Link
+        to="/post/11"
       >
         Open
-      </a>
+      </Link>
     </li>
     <li>
       <a
@@ -18,6 +17,7 @@ exports[`PostOptionsList Component should match snapshot 1`] = `
         onClick={[Function]}
       >
         Edit post 
+        
       </a>
     </li>
     <li>

@@ -1,17 +1,14 @@
 import React from 'react'
 import { create } from 'react-test-renderer'
 import { Provider } from 'react-redux'
-import mockStore from '../../../../../store/mockStore/mockStore'
-import { BrowserRouter as Router } from 'react-router-dom'
+import mockStore from '../../../../../store/__mocks__/mockStore'
 import ConversationInfo from '../info'
-import Message from '../../../../../store/mockStore/mock-reducers/Message'
+import Message from '../../../../../store/__mocks__/reducers/Message'
 
 describe('ConversationInfo Component', () => {
   const comp = (
     <Provider store={mockStore}>
-      <Router>
-        <ConversationInfo/>
-      </Router>
+      <ConversationInfo/>
     </Provider>
   )
 

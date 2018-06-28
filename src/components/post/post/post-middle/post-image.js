@@ -3,6 +3,7 @@ import ToTags from '../../../hashtag/toTags/toTags'
 import ImageTheatre from '../../../others/imageTheatre/imageTheatre'
 import PropTypes from 'prop-types'
 import PostTags from './post-tags'
+import classNames from 'classnames'
 
 export default class PostImage extends Component {
 
@@ -35,7 +36,7 @@ export default class PostImage extends Component {
 
             <img
               src={`/posts/${imgSrc}`}
-              className={`p_img ${filter}`}
+              className={classNames('p_img', filter)}
               onClick={() => this._toggle('showImage')}
             />
 
@@ -48,7 +49,7 @@ export default class PostImage extends Component {
         </div>
 
         {
-          showImage ?
+          showImage &&
             <ImageTheatre
               imgSrc={`/posts/${imgSrc}`}
               filter={filter}
@@ -57,7 +58,6 @@ export default class PostImage extends Component {
               link={`/post/${post_id}`}
               back={() => this._toggle('showImage')}
             />
-            : null
         }
 
       </div>

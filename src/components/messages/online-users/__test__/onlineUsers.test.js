@@ -1,11 +1,10 @@
 import React from 'react'
 import { create } from 'react-test-renderer'
 import { Provider } from 'react-redux'
-import mockStore from '../../../../store/mockStore/mockStore'
-import { BrowserRouter as Router } from 'react-router-dom'
+import mockStore from '../../../../store/__mocks__/mockStore'
 import OnlineUsers, { PureOnlineUsers } from '../onlineUsers'
 import { shallow } from 'enzyme'
-import Message from '../../../../store/mockStore/mock-reducers/Message'
+import Message from '../../../../store/__mocks__/reducers/Message'
 
 describe('OnlineUsers Component', () => {
   let mockFn = jest.fn()
@@ -13,11 +12,9 @@ describe('OnlineUsers Component', () => {
   it('should match snapshot', () => {
     const tree = create(
       <Provider store={mockStore}>
-        <Router>
-          <OnlineUsers
-            back={mockFn}
-          />
-        </Router>
+        <OnlineUsers
+          back={mockFn}
+        />
       </Provider>
     ).toJSON()
     expect(tree).toMatchSnapshot()

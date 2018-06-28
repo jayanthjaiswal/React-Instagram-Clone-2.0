@@ -1,20 +1,17 @@
 import React from 'react'
-import MockDataElement from '../../../../../utils/__test__/mock-dataElement'
+import MockDataElement from '../../../../../utils/__mocks__/mock-dataElement'
 import { create } from 'react-test-renderer'
 import { Provider } from 'react-redux'
-import mockStore from '../../../../../store/mockStore/mockStore'
+import mockStore from '../../../../../store/__mocks__/mockStore'
 import BannerStats from '../stats'
-import { BrowserRouter as Router } from 'react-router-dom'
-import User from '../../../../../store/mockStore/mock-reducers/User'
+import User from '../../../../../store/__mocks__/reducers/User'
 
 describe('BannerStats Component', () => {
   MockDataElement()
 
   const comp = (
     <Provider store={mockStore}>
-      <Router>
-        <BannerStats/>
-      </Router>
+      <BannerStats/>
     </Provider>
   )
 

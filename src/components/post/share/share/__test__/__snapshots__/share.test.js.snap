@@ -84,13 +84,12 @@ Array [
                 <div
                   className="modal_it_info"
                 >
-                  <a
+                  <Link
                     className="modal_it_username"
-                    href="/profile/zayn"
-                    onClick={[Function]}
+                    to="/profile/zayn"
                   >
                     zayn
-                  </a>
+                  </Link>
                   <span
                     className="modal_it_light"
                   >
@@ -101,7 +100,7 @@ Array [
                   className="modal_ff"
                 >
                   <a
-                    className="pri_btn share_btn "
+                    className="pri_btn share_btn"
                     href="#"
                     onClick={[Function]}
                   >
@@ -127,13 +126,12 @@ Array [
                 <div
                   className="modal_it_info"
                 >
-                  <a
+                  <Link
                     className="modal_it_username"
-                    href="/profile/noddy"
-                    onClick={[Function]}
+                    to="/profile/noddy"
                   >
                     noddy
-                  </a>
+                  </Link>
                   <span
                     className="modal_it_light"
                   >
@@ -144,7 +142,7 @@ Array [
                   className="modal_ff"
                 >
                   <a
-                    className="pri_btn share_btn "
+                    className="pri_btn share_btn"
                     href="#"
                     onClick={[Function]}
                   >
@@ -213,7 +211,7 @@ Array [
         className="modal_bottom"
       >
         <a
-          className="pri_btn  "
+          className="pri_btn"
           href="#"
           onClick={[Function]}
         >

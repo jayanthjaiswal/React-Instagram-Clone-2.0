@@ -2,19 +2,21 @@ import React from 'react'
 import { create } from 'react-test-renderer'
 import Explore from '../explore'
 import { Provider } from 'react-redux'
-import mockStore from '../../../store/mockStore/mockStore'
-import { BrowserRouter as Router } from 'react-router-dom'
+import mockStore from '../../../store/__mocks__/mockStore'
+import { MemoryRouter } from 'react-router-dom'
+
+jest.unmock('react-router-dom')
 
 describe('Explore Component', () => {
 
   it('should match snapshot', () => {
     const tree = create(
       <Provider store={mockStore} >
-        <Router>
+        <MemoryRouter>
           <Explore
             match={{ url: '/explore' }}
           />
-        </Router>
+        </MemoryRouter>
       </Provider>
     ).toJSON()
     expect(tree).toMatchSnapshot()

@@ -17,29 +17,27 @@ exports[`LikeList Component should match snapshot and show <AppLink> 1`] = `
     <div
       className="modal_it_info"
     >
-      <a
+      <Link
         className="modal_it_username"
-        href="/profile/ragnar"
-        onClick={[Function]}
+        to="/profile/ragnar"
       >
         You
-      </a>
+      </Link>
       <span
         className="modal_it_light"
       >
-        Last year
+        a month ago
       </span>
     </div>
     <div
       className="modal_ff"
     >
-      <a
+      <Link
         className="pri_btn follow"
-        href="/profile/ragnar"
-        onClick={[Function]}
+        to="/profile/ragnar"
       >
         Profile
-      </a>
+      </Link>
     </div>
   </div>
   <hr />
@@ -63,24 +61,23 @@ exports[`LikeList Component should match snapshot and show <Follow/> 1`] = `
     <div
       className="modal_it_info"
     >
-      <a
+      <Link
         className="modal_it_username"
-        href="/profile/ragnar"
-        onClick={[Function]}
+        to="/profile/ragnar"
       >
         ragnar
-      </a>
+      </Link>
       <span
         className="modal_it_light"
       >
-        Last year
+        a month ago
       </span>
     </div>
     <div
       className="modal_ff"
     >
       <a
-        className="pri_btn follow "
+        className="pri_btn follow"
         href="#"
         onClick={[Function]}
       >
@@ -109,24 +106,23 @@ exports[`LikeList Component should match snapshot and show <RemoveLikeAsAdmin> 1
     <div
       className="modal_it_info"
     >
-      <a
+      <Link
         className="modal_it_username"
-        href="/profile/ragnar"
-        onClick={[Function]}
+        to="/profile/ragnar"
       >
         ragnar
-      </a>
+      </Link>
       <span
         className="modal_it_light"
       >
-        Last year
+        a month ago
       </span>
     </div>
     <div
       className="modal_ff"
     >
       <a
-        className="sec_btn  "
+        className="sec_btn"
         href="#"
         onClick={[Function]}
       >
@@ -155,24 +151,23 @@ exports[`LikeList Component should match snapshot and show <Unfollow/> 1`] = `
     <div
       className="modal_it_info"
     >
-      <a
+      <Link
         className="modal_it_username"
-        href="/profile/ragnar"
-        onClick={[Function]}
+        to="/profile/ragnar"
       >
         ragnar
-      </a>
+      </Link>
       <span
         className="modal_it_light"
       >
-        Last year
+        a month ago
       </span>
     </div>
     <div
       className="modal_ff"
     >
       <a
-        className="pri_btn unfollow "
+        className="pri_btn unfollow"
         href="#"
         onClick={[Function]}
       >

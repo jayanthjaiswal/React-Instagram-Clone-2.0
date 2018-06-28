@@ -1,11 +1,10 @@
 import React from 'react'
 import { create } from 'react-test-renderer'
 import { Provider } from 'react-redux'
-import mockStore from '../../../../../../store/mockStore/mockStore'
-import { BrowserRouter as Router } from 'react-router-dom'
+import mockStore from '../../../../../../store/__mocks__/mockStore'
 import LikeList from '../like-list'
-import Post from '../../../../../../store/mockStore/mock-reducers/Post'
-import MockDataElement from '../../../../../../utils/__test__/mock-dataElement'
+import Post from '../../../../../../store/__mocks__/reducers/Post'
+import MockDataElement from '../../../../../../utils/__mocks__/mock-dataElement'
 
 describe('LikeList Component', () => {
   let dataElement
@@ -20,13 +19,11 @@ describe('LikeList Component', () => {
 
   const comp = (extraProps={}) => (
     <Provider store={mockStore}>
-      <Router>
-        <LikeList
-          {...Post.likes[0]}
-          decrementLikes={jest.fn()}
-          {...extraProps}
-        />
-      </Router>
+      <LikeList
+        {...Post.likes[0]}
+        decrementLikes={jest.fn()}
+        {...extraProps}
+      />
     </Provider>
   )
 

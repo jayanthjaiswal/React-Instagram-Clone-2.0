@@ -1,20 +1,17 @@
 import React from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
 import BlockedUser, { PureBlockedUser } from '../blocked-user'
 import { create } from 'react-test-renderer'
-import Setting from '../../../../../../store/mockStore/mock-reducers/Setting'
-import mockStore from '../../../../../../store/mockStore/mockStore'
+import Setting from '../../../../../../store/__mocks__/reducers/Setting'
+import mockStore from '../../../../../../store/__mocks__/mockStore'
 import { shallow } from 'enzyme'
 
 describe('BlockedUser Component', () => {
 
   const comp = index => (
-    <Router>
-      <BlockedUser
-        {...Setting.blockedUsers[index]}
-        store={mockStore}
-      />
-    </Router>
+    <BlockedUser
+      {...Setting.blockedUsers[index]}
+      store={mockStore}
+    />
   )
 
   it('should match snapshot', () => {

@@ -1,12 +1,11 @@
 import React from 'react'
-import MockDataElement from '../../../../../utils/__test__/mock-dataElement'
+import MockDataElement from '../../../../../utils/__mocks__/mock-dataElement'
 import { create } from 'react-test-renderer'
 import { Provider } from 'react-redux'
-import mockStore from '../../../../../store/mockStore/mockStore'
+import mockStore from '../../../../../store/__mocks__/mockStore'
 import PeopleYouKnowList, { PurePeopleYouKnowList } from '../puk-list'
-import { BrowserRouter as Router } from 'react-router-dom'
 import { shallow } from 'enzyme'
-import User from '../../../../../store/mockStore/mock-reducers/User'
+import User from '../../../../../store/__mocks__/reducers/User'
 
 describe('PeopleYouKnowList Component', () => {
   MockDataElement()
@@ -14,12 +13,10 @@ describe('PeopleYouKnowList Component', () => {
   it('should match snapshot with profile link', () => {
     const tree = create(
       <Provider store={mockStore}>
-        <Router>
-          <PeopleYouKnowList
-            {...User.mutualUsers[0]}
-            user={24}
-          />
-        </Router>
+        <PeopleYouKnowList
+          {...User.mutualUsers[0]}
+          user={24}
+        />
       </Provider>
     ).toJSON()
     expect(tree).toMatchSnapshot()

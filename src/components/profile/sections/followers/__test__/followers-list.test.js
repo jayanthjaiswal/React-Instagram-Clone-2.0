@@ -1,11 +1,10 @@
 import React from 'react'
-import MockDataElement from '../../../../../utils/__test__/mock-dataElement'
+import MockDataElement from '../../../../../utils/__mocks__/mock-dataElement'
 import { create } from 'react-test-renderer'
 import { Provider } from 'react-redux'
-import mockStore from '../../../../../store/mockStore/mockStore'
+import mockStore from '../../../../../store/__mocks__/mockStore'
 import FollowersList, { PureFollowersList } from '../followers-list'
-import f from '../../../../../store/mockStore/mock-reducers/f'
-import { BrowserRouter as Router } from 'react-router-dom'
+import f from '../../../../../store/__mocks__/reducers/f'
 import { shallow } from 'enzyme'
 
 describe('FollowersList Component', () => {
@@ -14,11 +13,9 @@ describe('FollowersList Component', () => {
   it('should match snapshot with profile link', () => {
     const tree = create(
       <Provider store={mockStore}>
-        <Router>
-          <FollowersList
-            {...f[0]}
-          />
-        </Router>
+        <FollowersList
+          {...f[0]}
+        />
       </Provider>
     ).toJSON()
     expect(tree).toMatchSnapshot()

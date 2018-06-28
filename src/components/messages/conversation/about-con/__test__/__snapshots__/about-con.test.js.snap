@@ -93,12 +93,11 @@ Array [
                   <div
                     className="sli_with_cont"
                   >
-                    <a
-                      href="/profile/selena"
-                      onClick={[Function]}
+                    <Link
+                      to="/profile/selena"
                     >
                       selena
-                    </a>
+                    </Link>
                     <span
                       className="sli_w"
                     >
@@ -118,7 +117,7 @@ Array [
                 <span
                   className="sli_bold"
                 >
-                  Last year
+                  a month ago
                 </span>
               </div>
               <div
@@ -209,7 +208,7 @@ Array [
         className="modal_bottom"
       >
         <a
-          className="pri_btn  "
+          className="pri_btn"
           href="#"
           onClick={[Function]}
         >

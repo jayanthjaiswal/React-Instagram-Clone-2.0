@@ -11,32 +11,30 @@ exports[`Notification Component should match snapshot with change_admin notifica
   <div
     className="noti_left"
   >
-    <a
+    <Link
       className="noti_bold noti_username"
-      href="/profile/ghalib"
-      onClick={[Function]}
+      to="/profile/ghalib"
     >
       ghalib
-    </a>
+    </Link>
     <span>
        made you admin of a group
     </span>
     <span
       className="noti_time"
     >
-      4 months ago
+      a month ago
     </span>
   </div>
   <div
     className="noti_right follow_noti_right"
   >
-    <a
+    <Link
       className="pri_btn"
-      href="/group/11"
-      onClick={[Function]}
+      to="/group/11"
     >
       View group
-    </a>
+    </Link>
   </div>
 </div>
 `;
@@ -52,27 +50,26 @@ exports[`Notification Component should match snapshot with follow notification 1
   <div
     className="noti_left"
   >
-    <a
+    <Link
       className="noti_bold noti_username"
-      href="/profile/ghalib"
-      onClick={[Function]}
+      to="/profile/ghalib"
     >
       ghalib
-    </a>
+    </Link>
     <span>
        started following you
     </span>
     <span
       className="noti_time"
     >
-      4 months ago
+      a month ago
     </span>
   </div>
   <div
     className="noti_right follow_noti_right"
   >
     <a
-      className="pri_btn follow "
+      className="pri_btn follow"
       href="#"
       onClick={[Function]}
     >
@@ -93,32 +90,30 @@ exports[`Notification Component should match snapshot with like notification 1`]
   <div
     className="noti_left"
   >
-    <a
+    <Link
       className="noti_bold noti_username"
-      href="/profile/ghalib"
-      onClick={[Function]}
+      to="/profile/ghalib"
     >
       ghalib
-    </a>
+    </Link>
     <span>
        liked your post
     </span>
     <span
       className="noti_time"
     >
-      4 months ago
+      a month ago
     </span>
   </div>
   <div
     className="noti_right follow_noti_right"
   >
-    <a
+    <Link
       className="pri_btn"
-      href="/post/8"
-      onClick={[Function]}
+      to="/post/8"
     >
       Open post
-    </a>
+    </Link>
   </div>
 </div>
 `;
@@ -134,32 +129,30 @@ exports[`Notification Component should match snapshot with mention_post notifica
   <div
     className="noti_left"
   >
-    <a
+    <Link
       className="noti_bold noti_username"
-      href="/profile/ghalib"
-      onClick={[Function]}
+      to="/profile/ghalib"
     >
       ghalib
-    </a>
+    </Link>
     <span>
        mentioned you in a post
     </span>
     <span
       className="noti_time"
     >
-      4 months ago
+      a month ago
     </span>
   </div>
   <div
     className="noti_right follow_noti_right"
   >
-    <a
+    <Link
       className="pri_btn"
-      href="/post/8"
-      onClick={[Function]}
+      to="/post/8"
     >
       Open post
-    </a>
+    </Link>
   </div>
 </div>
 `;
@@ -175,32 +168,30 @@ exports[`Notification Component should match snapshot with recommend notificatio
   <div
     className="noti_left"
   >
-    <a
+    <Link
       className="noti_bold noti_username"
-      href="/profile/ghalib"
-      onClick={[Function]}
+      to="/profile/ghalib"
     >
       ghalib
-    </a>
+    </Link>
     <span>
        recommended coldplay to you
     </span>
     <span
       className="noti_time"
     >
-      4 months ago
+      a month ago
     </span>
   </div>
   <div
     className="noti_right follow_noti_right"
   >
-    <a
+    <Link
       className="pri_btn"
-      href="/profile/coldplay"
-      onClick={[Function]}
+      to="/profile/coldplay"
     >
       View coldplay
-    </a>
+    </Link>
   </div>
 </div>
 `;
@@ -216,32 +207,30 @@ exports[`Notification Component should match snapshot with tag notification 1`] 
   <div
     className="noti_left"
   >
-    <a
+    <Link
       className="noti_bold noti_username"
-      href="/profile/ghalib"
-      onClick={[Function]}
+      to="/profile/ghalib"
     >
       ghalib
-    </a>
+    </Link>
     <span>
        tagged you in a post
     </span>
     <span
       className="noti_time"
     >
-      4 months ago
+      a month ago
     </span>
   </div>
   <div
     className="noti_right follow_noti_right"
   >
-    <a
+    <Link
       className="pri_btn"
-      href="/post/23"
-      onClick={[Function]}
+      to="/post/23"
     >
       Open post
-    </a>
+    </Link>
   </div>
 </div>
 `;

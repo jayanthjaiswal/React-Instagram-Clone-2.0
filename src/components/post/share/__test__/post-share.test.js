@@ -1,8 +1,7 @@
 import React from 'react'
 import { create } from 'react-test-renderer'
 import { Provider } from 'react-redux'
-import mockStore from '../../../../store/mockStore/mockStore'
-import { BrowserRouter as Router } from 'react-router-dom'
+import mockStore from '../../../../store/__mocks__/mockStore'
 import PostShare from '../post-share'
 import { shallow } from 'enzyme'
 
@@ -20,11 +19,9 @@ describe('PostShare Component', () => {
   it('should match snapshot', () => {
     const tree = create(
       <Provider store={mockStore}>
-        <Router>
-          <PostShare
-            {...props}
-          />
-        </Router>
+        <PostShare
+          {...props}
+        />
       </Provider>
     ).toJSON()
     expect(tree).toMatchSnapshot()

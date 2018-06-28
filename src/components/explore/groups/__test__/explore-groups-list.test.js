@@ -1,22 +1,19 @@
 import React from 'react'
 import { Provider } from 'react-redux'
-import mockStore from '../../../../store/mockStore/mockStore'
+import mockStore from '../../../../store/__mocks__/mockStore'
 import ExploreGroupsList, { PureExploreGroupsList } from '../explore-groups-list'
-import Explore from '../../../../store/mockStore/mock-reducers/Explore'
+import Explore from '../../../../store/__mocks__/reducers/Explore'
 import { create } from 'react-test-renderer'
-import { BrowserRouter as Router } from 'react-router-dom'
 import { shallow } from 'enzyme'
-import User from '../../../../store/mockStore/mock-reducers/User'
+import User from '../../../../store/__mocks__/reducers/User'
 
 describe('ExploreGroupsList Component', () => {
 
   const comp = (index=0) => (
     <Provider store={mockStore}>
-      <Router>
-        <ExploreGroupsList
-          {...Explore.groups[index]}
-        />
-      </Router>
+      <ExploreGroupsList
+        {...Explore.groups[index]}
+      />
     </Provider>
   )
 

@@ -8,6 +8,7 @@ import End from '../../../others/end'
 import PropTypes from 'prop-types'
 import UserPhotos from './photos'
 import IsLoading from '../../../others/isLoading'
+import classNames from 'classnames'
 
 class Gallery extends Component {
 
@@ -37,18 +38,21 @@ class Gallery extends Component {
 
     return (
       <div>
-
         <Title value={`${username}'s gallery`} />
 
         <FadeIn duration='300ms'>
 
           <IsLoading loading={loading} />
 
-          <div className={`pro_senapati photos_senapati ${cLoading(loading)}`}>
+          <div
+            className={classNames(
+              'pro_senapati', 'photos_senapati', cLoading(loading)
+            )}
+          >
             <UserPhotos/>
           </div>
 
-          { !loading && len != 0 ? <End/> : null }
+          { (!loading && len != 0) && <End/> }
 
         </FadeIn>
       </div>

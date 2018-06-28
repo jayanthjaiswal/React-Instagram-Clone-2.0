@@ -7,6 +7,7 @@ import End from '../../../others/end'
 import { bottomScroll, cLoading } from '../../../../utils/utils'
 import GroupPhotos from './photos'
 import IsLoading from '../../../others/isLoading'
+import classNames from 'classnames'
 
 class GroupGallery extends Component {
 
@@ -43,11 +44,13 @@ class GroupGallery extends Component {
 
           <IsLoading loading={loading} />
 
-          <div className={`pro_senapati photos_senapati ${cLoading(loading)}`}>
+          <div
+            className={classNames('pro_senapati', 'photos_senapati', cLoading(loading))}
+          >
             <GroupPhotos/>
           </div>
 
-          { !loading && len != 0 ? <End/> : null }
+          { (!loading && len != 0) && <End/> }
 
         </FadeIn>
       </div>

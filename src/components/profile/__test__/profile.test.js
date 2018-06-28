@@ -1,12 +1,14 @@
 import React from 'react'
-import MockDataElement from '../../../utils/__test__/mock-dataElement'
+import MockDataElement from '../../../utils/__mocks__/mock-dataElement'
 import { create } from 'react-test-renderer'
 import { Provider } from 'react-redux'
-import mockStore from '../../../store/mockStore/mockStore'
-import { BrowserRouter as Router } from 'react-router-dom'
+import mockStore from '../../../store/__mocks__/mockStore'
 import Profile, { PureProfile } from '../profile'
 import { shallow } from 'enzyme'
-import User from '../../../store/mockStore/mock-reducers/User'
+import User from '../../../store/__mocks__/reducers/User'
+import { MemoryRouter } from 'react-router-dom'
+
+jest.unmock('react-router-dom')
 
 describe('Profile Component', () => {
   MockDataElement()
@@ -21,9 +23,9 @@ describe('Profile Component', () => {
   it('should match snapshot', () => {
     const tree = create(
       <Provider store={mockStore}>
-        <Router>
+        <MemoryRouter>
           <Profile {...props} />
-        </Router>
+        </MemoryRouter>
       </Provider>
     ).toJSON()
     expect(tree).toMatchSnapshot()

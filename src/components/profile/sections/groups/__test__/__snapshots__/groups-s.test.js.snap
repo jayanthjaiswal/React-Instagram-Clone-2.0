@@ -46,14 +46,13 @@ exports[`UserGroups Component should match snapshot 1`] = `
               <div
                 className="m_top_right"
               >
-                <a
-                  href="/group/11"
-                  onClick={[Function]}
+                <Link
+                  to="/group/11"
                 >
                   a groupss
-                </a>
+                </Link>
                 <span>
-                  Last year
+                  a month ago
                 </span>
               </div>
             </div>
@@ -61,7 +60,7 @@ exports[`UserGroups Component should match snapshot 1`] = `
               className="m_bottom"
             >
               <a
-                className="pri_btn unfollow "
+                className="pri_btn unfollow"
                 href="#"
                 onClick={[Function]}
               >

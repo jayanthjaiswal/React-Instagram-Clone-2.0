@@ -15,12 +15,11 @@ exports[`Favourite Component should match snapshot with profile link 1`] = `
     <div
       className="m_top_right"
     >
-      <a
-        href="/profile/kinkade"
-        onClick={[Function]}
+      <Link
+        to="/profile/kinkade"
       >
         kinkade
-      </a>
+      </Link>
       <span>
         Thomas
          
@@ -32,19 +31,18 @@ exports[`Favourite Component should match snapshot with profile link 1`] = `
     className="m_bottom"
   >
     <a
-      className="sec_btn  "
+      className="sec_btn"
       href="#"
       onClick={[Function]}
     >
       Remove 
     </a>
-    <a
+    <Link
       className="sec_btn"
-      href="/profile/kinkade"
-      onClick={[Function]}
+      to="/profile/kinkade"
     >
       Profile
-    </a>
+    </Link>
   </div>
 </div>
 `;

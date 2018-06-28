@@ -15,12 +15,11 @@ exports[`ExploreUsersList Component should match snapshot 1`] = `
     <div
       className="m_top_right"
     >
-      <a
-        href="/profile/ghalib"
-        onClick={[Function]}
+      <Link
+        to="/profile/ghalib"
       >
         ghalib
-      </a>
+      </Link>
       <span>
         1 mutual follower
       </span>
@@ -30,7 +29,7 @@ exports[`ExploreUsersList Component should match snapshot 1`] = `
     className="m_bottom"
   >
     <a
-      className="pri_btn follow "
+      className="pri_btn follow"
       href="#"
       onClick={[Function]}
     >
@@ -55,12 +54,11 @@ exports[`ExploreUsersList Component should match snapshot when mutualUsersCount 
     <div
       className="m_top_right"
     >
-      <a
-        href="/profile/coldplay"
-        onClick={[Function]}
+      <Link
+        to="/profile/coldplay"
       >
         coldplay
-      </a>
+      </Link>
       <span>
         cold play
       </span>
@@ -70,7 +68,7 @@ exports[`ExploreUsersList Component should match snapshot when mutualUsersCount 
     className="m_bottom"
   >
     <a
-      className="pri_btn follow "
+      className="pri_btn follow"
       href="#"
       onClick={[Function]}
     >

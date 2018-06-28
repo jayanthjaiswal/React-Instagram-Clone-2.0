@@ -3,7 +3,7 @@
 exports[`Comment Component should match snapshot with type image 1`] = `
 <div>
   <div
-    className="comments "
+    className="comments"
   >
     <img
       className="comments_avatar"
@@ -12,13 +12,12 @@ exports[`Comment Component should match snapshot with type image 1`] = `
     <div
       className="comments_content"
     >
-      <a
+      <Link
         className="comments_user"
-        href="/profile/coldplay"
-        onClick={[Function]}
+        to="/profile/coldplay"
       >
         coldplay
-      </a>
+      </Link>
       <img
         className="comments_img"
         onClick={[Function]}
@@ -30,7 +29,7 @@ exports[`Comment Component should match snapshot with type image 1`] = `
         <span
           className="comments_time"
         >
-          Last year
+          a month ago
         </span>
       </div>
       <div
@@ -47,7 +46,7 @@ exports[`Comment Component should match snapshot with type image 1`] = `
 exports[`Comment Component should match snapshot with type sticker 1`] = `
 <div>
   <div
-    className="comments "
+    className="comments"
   >
     <img
       className="comments_avatar"
@@ -56,13 +55,12 @@ exports[`Comment Component should match snapshot with type sticker 1`] = `
     <div
       className="comments_content"
     >
-      <a
+      <Link
         className="comments_user"
-        href="/profile/takkar"
-        onClick={[Function]}
+        to="/profile/takkar"
       >
         takkar
-      </a>
+      </Link>
       <img
         className="comments_sticker"
         src="/comments/instagram_comment_1527447929485.jpg"
@@ -73,7 +71,7 @@ exports[`Comment Component should match snapshot with type sticker 1`] = `
         <span
           className="comments_time"
         >
-          Last year
+          a month ago
         </span>
       </div>
       <div
@@ -90,7 +88,7 @@ exports[`Comment Component should match snapshot with type sticker 1`] = `
 exports[`Comment Component should match snapshot with type text 1`] = `
 <div>
   <div
-    className="comments "
+    className="comments"
   >
     <img
       className="comments_avatar"
@@ -99,13 +97,12 @@ exports[`Comment Component should match snapshot with type text 1`] = `
     <div
       className="comments_content"
     >
-      <a
+      <Link
         className="comments_user"
-        href="/profile/ghalib"
-        onClick={[Function]}
+        to="/profile/ghalib"
       >
         ghalib
-      </a>
+      </Link>
       <p
         className="ce"
       >
@@ -126,7 +123,7 @@ exports[`Comment Component should match snapshot with type text 1`] = `
         <span
           className="comments_time"
         >
-          Last year
+          a month ago
         </span>
       </div>
       <div

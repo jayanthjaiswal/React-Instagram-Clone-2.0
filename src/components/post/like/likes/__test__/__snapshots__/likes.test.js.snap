@@ -84,24 +84,23 @@ Array [
                 <div
                   className="modal_it_info"
                 >
-                  <a
+                  <Link
                     className="modal_it_username"
-                    href="/profile/ragnar"
-                    onClick={[Function]}
+                    to="/profile/ragnar"
                   >
                     ragnar
-                  </a>
+                  </Link>
                   <span
                     className="modal_it_light"
                   >
-                    Last year
+                    a month ago
                   </span>
                 </div>
                 <div
                   className="modal_ff"
                 >
                   <a
-                    className="pri_btn follow "
+                    className="pri_btn follow"
                     href="#"
                     onClick={[Function]}
                   >
@@ -170,7 +169,7 @@ Array [
         className="modal_bottom"
       >
         <a
-          className="pri_btn  "
+          className="pri_btn"
           href="#"
           onClick={[Function]}
         >

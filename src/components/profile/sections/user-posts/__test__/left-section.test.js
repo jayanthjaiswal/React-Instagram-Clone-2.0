@@ -1,22 +1,19 @@
 import React from 'react'
-import MockDataElement from '../../../../../utils/__test__/mock-dataElement'
+import MockDataElement from '../../../../../utils/__mocks__/mock-dataElement'
 import { create } from 'react-test-renderer'
 import { Provider } from 'react-redux'
-import mockStore from '../../../../../store/mockStore/mockStore'
+import mockStore from '../../../../../store/__mocks__/mockStore'
 import UserPostsLeftSection from '../left-section'
-import { BrowserRouter as Router } from 'react-router-dom'
-import User from '../../../../../store/mockStore/mock-reducers/User'
+import User from '../../../../../store/__mocks__/reducers/User'
 
 describe('UserPostsLeftSection Component', () => {
   MockDataElement()
 
   const comp = (username='takkar') => (
     <Provider store={mockStore}>
-      <Router>
-        <UserPostsLeftSection
-          username={username}
-        />
-      </Router>
+      <UserPostsLeftSection
+        username={username}
+      />
     </Provider>
   )
 
